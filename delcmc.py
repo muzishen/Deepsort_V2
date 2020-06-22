@@ -1,0 +1,10 @@
+import os
+os.system('cd /sys/fs/cgroup/memory/')
+os.system('mkdir myGroup')
+os.system('echo 300M > memory.limit_in_bytes')
+os.system('cd /root')
+os.system('mkdir swap')
+os.system('cd swap')
+os.system('sudo dd if=/dev/zero of=swapfile bs=40960 count=100000')
+os.system('sudo mkswap swapfile')
+os.system('sudo swapon swapfile')

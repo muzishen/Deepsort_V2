@@ -16,17 +16,8 @@ import glob
 
 
 def read_file(txt):
-    # print(txt)
-    # file = open(txt)
-    # a  =file.read()
     data = np.loadtxt(txt, delimiter=',')
-    # print(data)
-    # print('===')
-    #length = data.shape[0]
     array1 = (data[:,0:5])
-    #print(array1)
-    # array2 = data[:,4]
-    # array3 = np.zeros(length)
     return array1
 
 def zxywh_to_xywh(boxes_xyxy):
@@ -45,27 +36,16 @@ def zxywh_to_xywh(boxes_xyxy):
 class detect(object):
     def __init__(self,  is_xywh=True, use_cuda=True):
 
-        # constants
-        #self.size = self.net.width, self.net.height
-        #self.score_thresh = score_thresh
-        #self.conf_thresh = conf_thresh
 
         self.use_cuda = use_cuda
         self.is_xywh = is_xywh
 
-        #self.num_classes = self.net.num_classes
-        #self.class_names = self.load_class_names(namesfile)
+
 
     def read_txt(self, height, wight ,txt_path,score_thresh ):
-        #im = cv2.imread(image_path)
 
-        #print(txt_path)
 
         boxes= read_file(txt_path)
-        # print(boxes)
-        # print(len(boxes))
-        # print(txt_boxes)
-        # boxes = post_process(boxes, 0, self.conf_thresh, self.nms_thresh)[0].cpu()
         boxes = boxes[boxes[:, -1] > score_thresh, :]  # bbox xmin ymin xmax ymax
         boxes = boxes[boxes[:, -2]/boxes[:, -3] < 4, :]
         boxes = boxes[boxes[:, -3]/boxes[:, -2] < 1, :]
