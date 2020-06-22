@@ -1,0 +1,9 @@
+EfficientDet:
+  COMPOUND_COEF: 4
+  ANCHOR_RATIOS: [(1.0, 1.0), (1.4, 0.7), (0.7, 1.4)]
+  ANCHOR_SCALES: [2 ** 0, 2 ** (1.0 / 3.0), 2 ** (2.0 / 3.0)]
+  WEIGHT: "./detector/EfficientDet/weight/efficientdet-d4.pth"
+  CLASS_NAMES: "./detector/EfficientDet/cfg/coco.names"
+
+  SCORE_THRESH: 0.1
+  NMS_THRESH: 0.2

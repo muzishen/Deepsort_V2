@@ -1,0 +1,7 @@
+Rcnn:
+  CONFIG:  '/media/shenfei/shensdd/deep_sort_new/detector/Pedestron/configs/elephant/crowdhuman/cascade_hrnet.py'
+  WEIGHT: '/media/shenfei/shensdd/deep_sort_new/detector/Pedestron/models_pretrained/crowdepoch_19.pth.stu'
+  COMPOUND_COEF: 4
+  ANCHOR_RATIOS: [(1.0, 1.0), (1.4, 0.7), (0.7, 1.4)]
+  ANCHOR_SCALES: [2 ** 0, 2 ** (1.0 / 3.0), 2 ** (2.0 / 3.0)]
+  SCORE_THRESH: 0.5
