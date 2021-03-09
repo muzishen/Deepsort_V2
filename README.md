@@ -10,7 +10,7 @@
 
 Detection：
 
-    Cascade-RCNN(HRNet) 基于旷视的mmdetection框架。
+    Cascade-RCNN(HRNet) 基于mmdetection框架。
     采用多尺度训练（1216,608）和（1024,2048）, 多尺度测试：（1216,608），（1632,816）（2048，1024）
     常见数据增强crop 翻转，pad等
     丢帧后处理线性平滑
