@@ -15,7 +15,7 @@ Detection：
     常见数据增强crop 翻转，pad等
     丢帧后处理线性平滑
     修正框小于1==1
-    多epoch平均的AWS
+    多epoch平均的SWA
 
 #### B榜 新增2个挑战： 更密集的人群和遮挡
 
