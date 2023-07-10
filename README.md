@@ -29,3 +29,5 @@ Detection：
   python main.py
 参数： --data_path  测试图片路径
 	   --result_path  输出路径
+### 
+感谢好基友[何新](https://github.com/whut2962575697),多次彻夜讨论！
